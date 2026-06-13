@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lottery Picker</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h2>🎲 Lottery Picker</h2>
+
+      <div class="input-area">
+        <input type="text" id="nameInput" placeholder="Enter name" />
+        <button id="addBtn">OK</button>
+      </div>
+
+      <div class="section">
+        <h3>Participants</h3>
+        <ul id="participantList"></ul>
+      </div>
+
+      <button id="pickBtn">Random Pick</button>
+
+      <div class="section">
+        <h3>Results</h3>
+        <ul id="resultList"></ul>
+      </div>
+
+      <div id="status"></div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
