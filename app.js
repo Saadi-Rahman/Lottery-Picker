@@ -50,7 +50,25 @@ pickBtn.addEventListener("click", () => {
   if (participants.length === 0) {
     pickBtn.disabled = true;
     statusText.textContent = "🎉 Lottery Over";
+    resetBtn.style.display = "inline-block";
   }
+});
+
+//Reset Btn
+resetBtn.addEventListener("click", () => {
+  participants = [];
+  results = [];
+
+  renderParticipants();
+  renderResults();
+
+  pickBtn.disabled = true;
+
+  statusText.textContent = "";
+  resetBtn.style.display = "none";
+
+  nameInput.value = "";
+  nameInput.focus();
 });
 
 function renderParticipants() {

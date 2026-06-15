@@ -93,8 +93,26 @@ li:last-child {
 
 #status {
   text-align: center;
-  margin-top: 12px;
+  margin-top: 0px;
   font-weight: bold;
   color: red;
   font-size: 18px;
+}
+
+#statusContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+#resetBtn {
+  display: none;
+  font-size: 18px;
+  padding: 0;
+}
+
+#resetBtn:hover {
+  opacity: 0.8;
 }
