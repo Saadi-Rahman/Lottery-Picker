@@ -3,6 +3,7 @@ const addBtn = document.getElementById("addBtn");
 const pickBtn = document.getElementById("pickBtn");
 
 const participantList = document.getElementById("participantList");
+const participantCount = document.getElementById("participantCount");
 const resultList = document.getElementById("resultList");
 const statusText = document.getElementById("status");
 
@@ -79,6 +80,8 @@ function renderParticipants() {
     li.textContent = name;
     participantList.appendChild(li);
   });
+
+  participantCount.textContent = participants.length;
 }
 
 function renderResults() {
