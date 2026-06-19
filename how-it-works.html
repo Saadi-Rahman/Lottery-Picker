@@ -7,24 +7,43 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container page-content">
-      <h2>📖 How It Works</h2>
+    <div class="container">
+      <div class="header">
+        <h2>📖 How It Works</h2>
 
-      <ol>
-        <li>Enter a participant name in the input field.</li>
-        <li>Click the <strong>OK</strong> button to add the participant.</li>
-        <li>Repeat until all participants have been added.</li>
-        <li>
-          Click <strong>Random Pick</strong> to select a participant randomly.
-        </li>
-        <li>The selected participant is removed from the participant list.</li>
-        <li>The selected participant is added to the results list.</li>
-        <li>Continue clicking Random Pick until all names are selected.</li>
-        <li>When no participants remain, the lottery ends automatically.</li>
-        <li>Use the refresh button to start a new lottery.</li>
-      </ol>
+        <div class="menu-container">
+          <button id="menuBtn" class="menu-btn">&#9776;</button>
+
+          <div id="dropdownMenu" class="dropdown-menu">
+            <a href="index.html">Home</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="features.html">Features</a>
+            <a href="about.html">About</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-content">
+        <ol>
+          <li>Enter a participant name in the input field.</li>
+          <li>Click the <strong>OK</strong> button to add the participant.</li>
+          <li>Repeat until all participants have been added.</li>
+          <li>
+            Click <strong>Random Pick</strong> to select a participant randomly.
+          </li>
+          <li>
+            The selected participant is removed from the participant list.
+          </li>
+          <li>The selected participant is added to the results list.</li>
+          <li>Continue clicking Random Pick until all names are selected.</li>
+          <li>When no participants remain, the lottery ends automatically.</li>
+          <li>Use the refresh button to start a new lottery.</li>
+        </ol>
+      </div>
 
       <a class="back-link" href="index.html">← Back to Home</a>
     </div>
+
+    <script src="js/menu.js"></script>
   </body>
 </html>

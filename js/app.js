@@ -20,10 +20,6 @@ const resultList = document.getElementById("resultList");
 const participantCount = document.getElementById("participantCount");
 const statusText = document.getElementById("status");
 
-// Hamburger menu
-const menuBtn = document.getElementById("menuBtn");
-const dropdownMenu = document.getElementById("dropdownMenu");
-
 // ======================================
 // 2. APPLICATION DATA
 // ======================================
@@ -135,22 +131,6 @@ resetBtn.addEventListener("click", () => {
 
   // Focus input
   nameInput.focus();
-});
-
-// --------------------------------------
-// Hamburger Menu Toggle
-// --------------------------------------
-menuBtn.addEventListener("click", () => {
-  dropdownMenu.classList.toggle("show");
-});
-
-// --------------------------------------
-// Close Menu When Clicking Outside
-// --------------------------------------
-document.addEventListener("click", (e) => {
-  if (!menuBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
-    dropdownMenu.classList.remove("show");
-  }
 });
 
 // ======================================
