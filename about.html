@@ -20,28 +20,46 @@
         </h2>
 
         <div class="relative">
-          <button id="menuBtn" class="text-gray-700 text-3xl font-normal">
+          <!-- Hamburger Button -->
+          <button
+            id="menuBtn"
+            class="text-slate-300 text-3xl hover:text-amber-400 transition duration-200"
+          >
             ☰
           </button>
 
+          <!-- Dropdown Menu -->
           <div
             id="dropdownMenu"
-            class="hidden absolute right-0 mt-2 w-48 bg-white border rounded-lg shadow-lg z-50"
+            class="hidden absolute right-0 mt-2 w-52 bg-slate-800 border border-slate-600 rounded-xl shadow-2xl overflow-hidden z-50"
           >
-            <a href="index.html" class="block px-4 py-3 hover:bg-gray-100"
-              >Home</a
+            <a
+              href="index.html"
+              class="block px-4 py-3 text-slate-200 hover:bg-slate-700 hover:text-amber-400 transition duration-200"
             >
+              Home
+            </a>
+
             <a
               href="how-it-works.html"
-              class="block px-4 py-3 hover:bg-gray-100"
-              >How It Works</a
+              class="block px-4 py-3 text-slate-200 hover:bg-slate-700 hover:text-amber-400 transition duration-200"
             >
-            <a href="features.html" class="block px-4 py-3 hover:bg-gray-100"
-              >Features</a
+              How It Works
+            </a>
+
+            <a
+              href="features.html"
+              class="block px-4 py-3 text-slate-200 hover:bg-slate-700 hover:text-amber-400 transition duration-200"
             >
-            <a href="about.html" class="block px-4 py-3 hover:bg-gray-100"
-              >About</a
+              Features
+            </a>
+
+            <a
+              href="about.html"
+              class="block px-4 py-3 bg-slate-700 text-amber-400 font-semibold"
             >
+              About
+            </a>
           </div>
         </div>
       </div>
