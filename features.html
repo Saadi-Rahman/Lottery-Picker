@@ -5,39 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Features - Lottery Picker</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <div class="container">
-      <div class="header">
-        <h2>✨ Features</h2>
 
-        <div class="menu-container">
-          <button id="menuBtn" class="menu-btn">&#9776;</button>
+  <body class="bg-slate-900 flex justify-center p-3 min-h-screen">
+    <!--Main Container-->
+    <div
+      class="w-full max-w-md bg-slate-800 border border-slate-700 rounded-2xl shadow-2xl p-5"
+    >
+      <!--Header-->
+      <div class="flex justify-between items-center mb-8">
+        <h2 class="text-2xl font-bold text-amber-400">✨ Features</h2>
 
-          <div id="dropdownMenu" class="dropdown-menu">
-            <a href="index.html">Home</a>
-            <a href="how-it-works.html">How It Works</a>
-            <a href="features.html">Features</a>
-            <a href="about.html">About</a>
+        <div class="relative">
+          <button id="menuBtn" class="text-gray-700 text-3xl font-normal">
+            ☰
+          </button>
+
+          <div
+            id="dropdownMenu"
+            class="hidden absolute right-0 mt-2 w-48 bg-white border rounded-lg shadow-lg z-50"
+          >
+            <a href="index.html" class="block px-4 py-3 hover:bg-gray-100"
+              >Home</a
+            >
+            <a
+              href="how-it-works.html"
+              class="block px-4 py-3 hover:bg-gray-100"
+              >How It Works</a
+            >
+            <a href="features.html" class="block px-4 py-3 hover:bg-gray-100"
+              >Features</a
+            >
+            <a href="about.html" class="block px-4 py-3 hover:bg-gray-100"
+              >About</a
+            >
           </div>
         </div>
       </div>
 
-      <div class="page-content">
-        <ul>
-          <li>Add participants quickly.</li>
-          <li>View the total participant count.</li>
-          <li>Random and fair participant selection.</li>
-          <li>No duplicate selections.</li>
-          <li>Automatic removal of selected participants.</li>
-          <li>Sequential results display.</li>
-          <li>Lottery completion notification.</li>
-          <li>One-click lottery reset.</li>
-          <li>Responsive mobile-friendly layout.</li>
-        </ul>
+      <div class="leading-6">
+        <div
+          class="bg-slate-700 border border-slate-600 rounded-xl p-5 text-slate-200"
+        >
+          <ul class="my-4 pl-6">
+            <li class="mb-2.5">Add participants quickly.</li>
+            <li class="mb-2.5">View the total participant count.</li>
+            <li class="mb-2.5">Random and fair participant selection.</li>
+            <li class="mb-2.5">No duplicate selections.</li>
+            <li class="mb-2.5">Automatic removal of selected participants.</li>
+            <li class="mb-2.5">Sequential results display.</li>
+            <li class="mb-2.5">Lottery completion notification.</li>
+            <li class="mb-2.5">One-click lottery reset.</li>
+            <li class="mb-2.5">Responsive mobile-friendly layout.</li>
+          </ul>
+        </div>
       </div>
 
-      <a class="back-link" href="index.html">← Back to Home</a>
+      <a
+        href="index.html"
+        class="inline-block mt-5 text-blue-600 hover:underline"
+      >
+        ← Back to Home
+      </a>
     </div>
 
     <script src="js/menu.js"></script>

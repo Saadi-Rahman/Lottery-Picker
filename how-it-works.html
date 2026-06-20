@@ -5,43 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>How It Works - Lottery Picker</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <div class="container">
-      <div class="header">
-        <h2>📖 How It Works</h2>
 
-        <div class="menu-container">
-          <button id="menuBtn" class="menu-btn">&#9776;</button>
+  <body class="bg-slate-900 flex justify-center p-3 min-h-screen">
+    <!--Main Container-->
+    <div
+      class="w-full max-w-md bg-slate-800 border border-slate-700 rounded-2xl shadow-2xl p-5"
+    >
+      <!--Header-->
+      <div class="flex justify-between items-center mb-8">
+        <h2 class="text-2xl font-bold text-amber-400">📖 How It Works</h2>
 
-          <div id="dropdownMenu" class="dropdown-menu">
-            <a href="index.html">Home</a>
-            <a href="how-it-works.html">How It Works</a>
-            <a href="features.html">Features</a>
-            <a href="about.html">About</a>
+        <div class="relative">
+          <button id="menuBtn" class="text-gray-700 text-3xl font-normal">
+            ☰
+          </button>
+
+          <div
+            id="dropdownMenu"
+            class="hidden absolute right-0 mt-2 w-48 bg-white border rounded-lg shadow-lg z-50"
+          >
+            <a href="index.html" class="block px-4 py-3 hover:bg-gray-100"
+              >Home</a
+            >
+            <a
+              href="how-it-works.html"
+              class="block px-4 py-3 hover:bg-gray-100"
+              >How It Works</a
+            >
+            <a href="features.html" class="block px-4 py-3 hover:bg-gray-100"
+              >Features</a
+            >
+            <a href="about.html" class="block px-4 py-3 hover:bg-gray-100"
+              >About</a
+            >
           </div>
         </div>
       </div>
 
-      <div class="page-content">
-        <ol>
-          <li>Enter a participant name in the input field.</li>
-          <li>Click the <strong>OK</strong> button to add the participant.</li>
-          <li>Repeat until all participants have been added.</li>
-          <li>
-            Click <strong>Random Pick</strong> to select a participant randomly.
-          </li>
-          <li>
-            The selected participant is removed from the participant list.
-          </li>
-          <li>The selected participant is added to the results list.</li>
-          <li>Continue clicking Random Pick until all names are selected.</li>
-          <li>When no participants remain, the lottery ends automatically.</li>
-          <li>Use the refresh button to start a new lottery.</li>
-        </ol>
+      <div class="leading-6">
+        <div class="bg-slate-700 border border-slate-600 rounded-xl p-5">
+          <ol class="list-decimal pl-6 space-y-2 text-slate-200">
+            <li class="mb-2.5">Enter a participant name in the input field.</li>
+            <li class="mb-2.5">
+              Click the <strong>OK</strong> button to add the participant.
+            </li>
+            <li class="mb-2.5">
+              Repeat until all participants have been added.
+            </li>
+            <li class="mb-2.5">
+              Click <strong>Random Pick</strong> to select a participant
+              randomly.
+            </li>
+            <li class="mb-2.5">
+              The selected participant is removed from the participant list.
+            </li>
+            <li class="mb-2.5">
+              The selected participant is added to the results list.
+            </li>
+            <li class="mb-2.5">
+              Continue clicking Random Pick until all names are selected.
+            </li>
+            <li class="mb-2.5">
+              When no participants remain, the lottery ends automatically.
+            </li>
+            <li class="mb-2.5">
+              Use the refresh button to start a new lottery.
+            </li>
+          </ol>
+        </div>
       </div>
 
-      <a class="back-link" href="index.html">← Back to Home</a>
+      <a
+        href="index.html"
+        class="inline-block mt-5 text-blue-600 hover:underline"
+      >
+        ← Back to Home
+      </a>
     </div>
 
     <script src="js/menu.js"></script>
