@@ -10,7 +10,9 @@
 const nameInput = document.getElementById("nameInput");
 const addBtn = document.getElementById("addBtn");
 const pickBtn = document.getElementById("pickBtn");
+const drawAllBtn = document.getElementById("drawAllBtn");
 const resetBtn = document.getElementById("resetBtn");
+const status = document.getElementById("status");
 
 // Lists
 const participantList = document.getElementById("participantList");
@@ -97,12 +99,49 @@ pickBtn.addEventListener("click", () => {
 
   // Check if lottery is complete
   if (participants.length === 0) {
+    status.textContent = "🎉 Lottery is Over";
+
     pickBtn.disabled = true;
+    drawAllBtn.disabled = true;
 
-    statusText.textContent = "🎉 Lottery Over";
-
-    resetBtn.style.display = "inline-block";
+    resetBtn.classList.remove("hidden");
   }
+});
+
+// ===================================
+// DRAW ALL BUTTON
+// ===================================
+
+drawAllBtn.addEventListener("click", () => {
+  // Stop if there are no participants
+  if (participants.length === 0) return;
+
+  // Shuffle all remaining participants
+  for (let i = participants.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+
+    [participants[i], participants[j]] = [participants[j], participants[i]];
+  }
+
+  // Move all shuffled participants to results
+  results.push(...participants);
+
+  // Clear participant list
+  participants = [];
+
+  // Refresh both lists
+  renderParticipants();
+  renderResults();
+
+  // Lottery finished
+  status.textContent = "🎉 Lottery is Over";
+
+  // Disable both lottery buttons
+  pickBtn.disabled = true;
+  drawAllBtn.disabled = true;
+
+  // Show reset button
+  resetBtn.classList.remove("hidden");
 });
 
 // --------------------------------------
@@ -118,13 +157,14 @@ resetBtn.addEventListener("click", () => {
   renderResults();
 
   // Reset status
-  statusText.textContent = "";
+  status.textContent = "";
 
-  // Disable random picker
-  pickBtn.disabled = true;
+  // Enable buttons
+  pickBtn.disabled = false;
+  drawAllBtn.disabled = false;
 
   // Hide reset button
-  resetBtn.style.display = "none";
+  resetBtn.classList.add("hidden");
 
   // Clear input
   nameInput.value = "";
@@ -182,9 +222,6 @@ function updateParticipantCount() {
 
 // Random Pick disabled initially
 pickBtn.disabled = true;
-
-// Hide reset button initially
-resetBtn.style.display = "none";
 
 // Set participant count to zero
 updateParticipantCount();
