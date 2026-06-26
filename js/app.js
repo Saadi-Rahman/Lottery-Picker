@@ -14,6 +14,10 @@ const drawAllBtn = document.getElementById("drawAllBtn");
 const resetBtn = document.getElementById("resetBtn");
 const status = document.getElementById("status");
 
+// Initial state
+pickBtn.disabled = true;
+drawAllBtn.disabled = true;
+
 // Lists
 const participantList = document.getElementById("participantList");
 const resultList = document.getElementById("resultList");
@@ -50,11 +54,12 @@ addBtn.addEventListener("click", () => {
   // Add participant
   participants.push(name);
 
+  // Enable random picker & draw all buttons
+  pickBtn.disabled = false;
+  drawAllBtn.disabled = false;
+
   // Refresh participant list
   renderParticipants();
-
-  // Enable random picker
-  pickBtn.disabled = false;
 
   // Clear input field
   nameInput.value = "";
@@ -103,6 +108,9 @@ pickBtn.addEventListener("click", () => {
 
     pickBtn.disabled = true;
     drawAllBtn.disabled = true;
+
+    console.log("Pick:", pickBtn.disabled);
+    console.log("Draw All:", drawAllBtn.disabled);
 
     resetBtn.classList.remove("hidden");
   }
@@ -159,9 +167,9 @@ resetBtn.addEventListener("click", () => {
   // Reset status
   status.textContent = "";
 
-  // Enable buttons
-  pickBtn.disabled = false;
-  drawAllBtn.disabled = false;
+  // Disable buttons because list is empty
+  pickBtn.disabled = true;
+  drawAllBtn.disabled = true;
 
   // Hide reset button
   resetBtn.classList.add("hidden");
