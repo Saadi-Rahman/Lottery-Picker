@@ -1,30 +1,27 @@
 // ======================================
-// LOTTERY PICKER
-// ======================================
-
-// ======================================
 // 1. ELEMENT SELECTORS
 // ======================================
 
-// Input and buttons
+// FORM CONTROLS
 const nameInput = document.getElementById("nameInput");
 const addBtn = document.getElementById("addBtn");
+
+// LOTTERY ACTION BUTTONS
 const pickBtn = document.getElementById("pickBtn");
-const drawAllBtn = document.getElementById("drawAllBtn");
+const quickDrawBtn = document.getElementById("quickDrawBtn");
 const resetBtn = document.getElementById("resetBtn");
-const status = document.getElementById("status");
 
-// Initial state
-pickBtn.disabled = true;
-drawAllBtn.disabled = true;
-
-// Lists
+// LISTS
 const participantList = document.getElementById("participantList");
 const resultList = document.getElementById("resultList");
 
-// Status and counters
+// STATUS & COUNTERS
+const status = document.getElementById("status");
 const participantCount = document.getElementById("participantCount");
-const statusText = document.getElementById("status");
+
+// INITIAL STATE
+pickBtn.disabled = true;
+quickDrawBtn.disabled = true;
 
 // ======================================
 // 2. APPLICATION DATA
@@ -56,7 +53,7 @@ addBtn.addEventListener("click", () => {
 
   // Enable random picker & draw all buttons
   pickBtn.disabled = false;
-  drawAllBtn.disabled = false;
+  quickDrawBtn.disabled = false;
 
   // Refresh participant list
   renderParticipants();
@@ -68,7 +65,7 @@ addBtn.addEventListener("click", () => {
   nameInput.focus();
 
   // Clear lottery status if restarting
-  statusText.textContent = "";
+  status.textContent = "";
 });
 
 // --------------------------------------
@@ -107,20 +104,17 @@ pickBtn.addEventListener("click", () => {
     status.textContent = "🎉 Lottery is Over";
 
     pickBtn.disabled = true;
-    drawAllBtn.disabled = true;
-
-    console.log("Pick:", pickBtn.disabled);
-    console.log("Draw All:", drawAllBtn.disabled);
+    quickDrawBtn.disabled = true;
 
     resetBtn.classList.remove("hidden");
   }
 });
 
 // ===================================
-// DRAW ALL BUTTON
+// QUICK DRAW BUTTON
 // ===================================
 
-drawAllBtn.addEventListener("click", () => {
+quickDrawBtn.addEventListener("click", () => {
   // Stop if there are no participants
   if (participants.length === 0) return;
 
@@ -146,7 +140,7 @@ drawAllBtn.addEventListener("click", () => {
 
   // Disable both lottery buttons
   pickBtn.disabled = true;
-  drawAllBtn.disabled = true;
+  quickDrawBtn.disabled = true;
 
   // Show reset button
   resetBtn.classList.remove("hidden");
@@ -169,7 +163,7 @@ resetBtn.addEventListener("click", () => {
 
   // Disable buttons because list is empty
   pickBtn.disabled = true;
-  drawAllBtn.disabled = true;
+  quickDrawBtn.disabled = true;
 
   // Hide reset button
   resetBtn.classList.add("hidden");
