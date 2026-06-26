@@ -103,6 +103,11 @@ pickBtn.addEventListener("click", () => {
   if (participants.length === 0) {
     status.textContent = "🎉 Lottery is Over";
 
+    // Disable input field
+    nameInput.disabled = true;
+    addBtn.disabled = true;
+
+    // Disable both lottery buttons
     pickBtn.disabled = true;
     quickDrawBtn.disabled = true;
 
@@ -138,6 +143,10 @@ quickDrawBtn.addEventListener("click", () => {
   // Lottery finished
   status.textContent = "🎉 Lottery is Over";
 
+  // Disable input field
+  nameInput.disabled = true;
+  addBtn.disabled = true;
+
   // Disable both lottery buttons
   pickBtn.disabled = true;
   quickDrawBtn.disabled = true;
@@ -160,6 +169,10 @@ resetBtn.addEventListener("click", () => {
 
   // Reset status
   status.textContent = "";
+
+  // Re-enable input
+  nameInput.disabled = false;
+  addBtn.disabled = false;
 
   // Disable buttons because list is empty
   pickBtn.disabled = true;
