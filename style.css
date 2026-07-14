@@ -50,3 +50,24 @@ body {
       80px 50px;
   }
 }
+
+.dice {
+  display: inline-block;
+  animation: diceBounce 6s ease-in-out infinite;
+}
+
+@keyframes diceBounce {
+  0%,
+  90%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  93% {
+    transform: translateY(-15px) rotate(-90deg);
+  }
+
+  96% {
+    transform: translateY(0) rotate(360deg);
+  }
+}
