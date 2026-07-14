@@ -20,11 +20,12 @@
   </head>
 
   <body
+    id="vanta-bg"
     class="bg-orange-50 dark:bg-slate-900 flex justify-center p-3 min-h-screen"
   >
     <!--Main Container-->
     <div
-      class="w-full max-w-md bg-amber-50/30 dark:bg-slate-800/50 border border-slate-300 dark:border-slate-700 rounded-2xl shadow-2xl p-5 flex flex-col min-h-[90vh]"
+      class="w-full max-w-md bg-amber-50/10 dark:bg-slate-800/10 border border-slate-300 dark:border-slate-700 rounded-2xl shadow-2xl p-5 flex flex-col min-h-[90vh]"
     >
       <!--Header-->
       <div class="flex justify-between items-center mb-8">
@@ -92,7 +93,7 @@
           id="nameInput"
           type="text"
           placeholder="Enter participant name"
-          class="flex-1 min-w-0 px-3 py-2 bg-orange-50 dark:bg-slate-700 border border-amber-500 dark:border-slate-600 text-slate-800 dark:text-white placeholder-slate-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 dark:disabled:bg-slate-800 disabled:cursor-not-allowed"
+          class="flex-1 min-w-0 px-3 py-2 bg-orange-50/40 dark:bg-slate-700/60 border border-amber-500 dark:border-slate-600 text-slate-900 dark:text-white placeholder-slate-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 dark:disabled:bg-slate-800 disabled:cursor-not-allowed"
         />
 
         <button
@@ -111,7 +112,7 @@
 
         <ul
           id="participantList"
-          class="bg-orange-50 dark:bg-slate-700 border border-amber-500 dark:border-slate-600 rounded-xl p-3 min-h-[80px] text-slate-800 dark:text-slate-200"
+          class="bg-orange-50/40 dark:bg-slate-700/60 border border-amber-500 dark:border-slate-600 rounded-xl p-3 min-h-[80px] text-slate-800 dark:text-slate-200"
         ></ul>
       </div>
 
@@ -142,7 +143,7 @@
 
         <ul
           id="resultList"
-          class="bg-orange-100 dark:bg-amber-900/20 border border-amber-600 dark:border-amber-700 rounded-xl p-3 min-h-[80px] text-slate-800 dark:text-amber-200"
+          class="bg-orange-100/40 dark:bg-amber-900/20 border border-amber-600 dark:border-amber-700 rounded-xl p-3 min-h-[80px] text-slate-900 dark:text-amber-200"
         ></ul>
       </div>
 
@@ -176,5 +177,10 @@
     <script src="js/app.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/theme.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+
+    <!-- <script src="js/background.js"></script> // Vanta Animation -->
   </body>
 </html>

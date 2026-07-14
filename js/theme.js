@@ -34,5 +34,9 @@ if (themeToggle) {
         themeIcon.className = "fa-regular fa-sun";
       }
     }
+
+    if (typeof initBackground === "function") {
+      initBackground(); // for toggle Vanta effect
+    }
   });
 }
